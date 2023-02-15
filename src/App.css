@@ -41,9 +41,13 @@
    color: #888;
 }
 
-p {
+.result {
    font-size: 1.5rem;
    color: #00ffff;
+}
+
+button {
+   margin-bottom: 1rem;
 }
 
 .hidden {
@@ -55,7 +59,7 @@ p {
 }
 
 /* Loader */
-.loader i {
+#loader i {
    animation: rotate 1.5s linear infinite;
 }
 
