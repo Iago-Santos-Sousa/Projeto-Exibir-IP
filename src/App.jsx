@@ -5,15 +5,15 @@ function App() {
    const [dado, setDado] = useState({ endereco: "" });
    const [classe, setClasse] = useState(true);
 
+   async function getApi() {
+      const response = await fetch("https://ip4.seeip.org/json");
+      const data = await response.json();
+
+      const endereco = data.ip;
+      setDado({ ...dado, endereco });
+   }
+
    useEffect(() => {
-      async function getApi() {
-         const response = await fetch("https://ip4.seeip.org/json");
-         const data = await response.json();
-
-         const endereco = data.ip;
-         setDado({ ...dado, endereco });
-      }
-
       getApi();
    }, []);
 
